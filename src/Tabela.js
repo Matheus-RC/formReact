@@ -13,6 +13,16 @@ class Tabela extends React.Component{
                         <th>Telefone</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {this.props.dados.map((elemento, indice) => {
+                        return(
+                            <tr key={indice}>
+                                <td>{elemento.nome}</td>
+                                <td>{elemento.idade}</td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
             </table>
         );
      }
